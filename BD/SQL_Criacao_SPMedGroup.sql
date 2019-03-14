@@ -12,12 +12,6 @@ create table Usuarios(
 	,Id_Tipo int not null foreign key references Tipo_Usuarios(ID)
 );
 
-create table Clinica(
-	Nome varchar(250) not null
-	,CNPJ char(14) not null unique
-	,Razao_Social varchar(250) not null
-	,Endereco varchar (255) not null
-);
 
 create table Especialidades(
 	ID int identity primary key
@@ -57,4 +51,12 @@ create table Consulta(
 	,Id_Medico int not null foreign key references Medicos (ID)
 	,Data_Consulta date not null
 	,Status_Consulta varchar (250) not null
+);
+
+create table Clinica(
+	ID int identity primary key
+	,Nome varchar(250) not null
+	,CNPJ char(14) not null unique
+	,Razao_Social varchar(250) not null
+	,Endereco varchar (255) not null
 );

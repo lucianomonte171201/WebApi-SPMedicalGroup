@@ -6,6 +6,8 @@ select * from Tipo_Usuarios
 insert into Tipo_Usuarios(Nome)
 values ('Admin'),('Medico'),('Paciente')
 
+update Tipo_Usuarios set Nome = 'Administrador' where ID = 1
+
 --INSERT USUARIOS
 insert into Usuarios(Email,Senha,Id_Tipo)
 values ('admin@spmedgroup.com','******',1)
@@ -61,4 +63,8 @@ select * from Consulta
 
 --DELETANDO CONSULTA CANCELADA
 delete from Consulta where Id_Prontuario = 2
+
+
+
+drop table Clinica
 
